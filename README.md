@@ -23,13 +23,16 @@ Assicurati di avere [Node.js](https://nodejs.org/) e [npm](https://www.npmjs.com
 
    ```bash
    git clone https://github.com/giuliaSan/rules-editor-react.git
-Naviga nella cartella del progetto:
-cd rules-editor-react
-Installa le dipendenze:
-npm install
+2. Naviga nella cartella del progetto:
 
-Per avviare il progetto in modalità di sviluppo, esegui il comando:
-npm start
+   ```bash
+   cd rules-editor-react
 
-npm run build
+3. Installa le dipendenze:
+   
+   ```bash
+   npm install
 
+4. Per avviare il progetto in modalità di sviluppo, esegui il comando:
+   ```bash
+   npm start
