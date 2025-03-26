@@ -5,47 +5,57 @@ import RuleForm from "./components/RuleForm";
 import SaveButton from "./components/SaveButton";
 import { RuleGroup, Rule} from "./types/rule";
 import { saveJson } from "./utils/JsonHandler";
-import Modal from './components/Modal'; // Import the modal
+import Modal from './components/Modal';
 
 
 const App: React.FC = () => {
   const [ruleGroups, setRuleGroups] = useState<RuleGroup[]>([]);
   const [editingRule, setEditingRule] = useState<RuleGroup | null>(null);
   const [editingRuleIndex, setEditingRuleIndex] = useState<number | null>(null);
-  const [isModalVisible, setIsModalVisible] = useState<boolean>(false); // Modal visibility state
-
-  console.log("ruleGroups", ruleGroups); // Log ruleGroups to verify its structure
+  const [isModalVisible, setIsModalVisible] = useState<boolean>(false); 
+  const [currentGlobalIndex, setCurrentGlobalIndex] = useState<number | null>(null);
 
   const handleFileUpload = (data: RuleGroup[]) => {
     setRuleGroups(data);
   };
 
-  const handleSave = (updatedRule: Rule) => {
-    if (editingRule && editingRuleIndex !== null) {
-      const updatedGroups = ruleGroups.map((group) => {
-        if (group.group_id === editingRule.group_id) {
-          const updatedRules = [...group.rules];
-          updatedRules[editingRuleIndex] = updatedRule;
-          return { ...group, rules: updatedRules };
+  const handleSave = (updatedRule: Rule, globalIndex: number) => {
+
+    let currentGlobalIndex = 0; 
+    let found = false; 
+      const updatedGroups = ruleGroups.map(group => {
+      const updatedRules = group.rules.map(rule => {
+        if (!found && currentGlobalIndex === globalIndex) {
+          found = true;
+          return updatedRule;
         }
-        return group;
+        currentGlobalIndex++;
+        return rule;
       });
-      setRuleGroups(updatedGroups);
-      setIsModalVisible(false); // Hide modal after saving
-    }
+      return { ...group, rules: updatedRules }; 
+    });
+  
+    setRuleGroups(updatedGroups);
+    setIsModalVisible(false);
   };
 
-  const handleEditRule = (groupId: string, ruleIndex: number) => {
+  const handleEditRule = (groupId: string, ruleIndex: number, globalIndex: number) => {
+    console.log("Editing rule at global index:", globalIndex);
+    const validGlobalIndex = globalIndex !== null ? globalIndex : -1;
+
     const group = ruleGroups.find((group) => group.group_id === groupId);
+    console.log('group editing ', group)
     if (group) {
       setEditingRule(group);
       setEditingRuleIndex(ruleIndex);
-      setIsModalVisible(true); // Show modal
+      setCurrentGlobalIndex(validGlobalIndex); 
+      setIsModalVisible(true);
     }
   };
 
 
-const handleDeleteRule = (groupId: string, ruleIndex: number) => {
+const handleDeleteRule = (groupId: string, ruleIndex: number, globalIndex: number) => {
+  console.log("Deleting rule at global index:", globalIndex);
   const updatedGroups = ruleGroups.map((group) => {
     if (group.group_id === groupId) {
       const updatedRules = group.rules.filter((_, index) => index !== ruleIndex);
@@ -53,11 +63,11 @@ const handleDeleteRule = (groupId: string, ruleIndex: number) => {
     }
     return group;
   });
-  setRuleGroups(updatedGroups);  // Apply the updated groups to the state
+  setRuleGroups(updatedGroups);
 };
 
 const handleCancel = () => {
-  setIsModalVisible(false); // Hide modal on cancel
+  setIsModalVisible(false); 
 };
 
   const handleSaveUpdatedJson = () => {
@@ -85,6 +95,7 @@ const handleCancel = () => {
         {editingRule && editingRuleIndex !== null && (
           <RuleForm 
             initialRule={editingRule.rules[editingRuleIndex]} 
+            globalIndex={currentGlobalIndex}
             onSave={handleSave} 
             onCancel={handleCancel} 
           />
