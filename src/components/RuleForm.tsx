@@ -4,12 +4,12 @@ import { comparisonTypes, comparisonOperators, comparisonValueTypes } from "../e
 
 interface RuleFormProps {
   initialRule?: Rule;
-  onSave: (rule: Rule) => void;
+  globalIndex: number | null;
+  onSave: (rule: Rule, globalIndex: number) => void;
   onCancel: () => void;
 }
 
-const RuleForm: React.FC<RuleFormProps> = ({ initialRule, onSave, onCancel }) => {
-  // Assicurati di clonare l'oggetto initialRule per evitare la mutazione accidentale
+const RuleForm: React.FC<RuleFormProps> = ({ initialRule, globalIndex, onSave, onCancel }) => {
   const [rule, setRule] = useState<Rule>(structuredClone(initialRule) || {
     comparison_type: "",
     comparison_operator: "",
@@ -18,11 +18,12 @@ const RuleForm: React.FC<RuleFormProps> = ({ initialRule, onSave, onCancel }) =>
   });
 
   useEffect(() => {
+    console.log("Global Index in RuleForm:", globalIndex);
+
     if (initialRule) {
-      // Quando `initialRule` cambia, aggiorna `rule` con una copia clonata
       setRule(structuredClone(initialRule));
     }
-  }, [initialRule]);
+  }, [initialRule, globalIndex]);
 
   const handleChange = (e: React.ChangeEvent<HTMLSelectElement | HTMLInputElement>) => {
     setRule((prevRule) => ({
@@ -35,13 +36,17 @@ const RuleForm: React.FC<RuleFormProps> = ({ initialRule, onSave, onCancel }) =>
     const value = e.target.value;
     setRule((prevRule) => ({
       ...prevRule,
-      value: value.includes(",") ? value.split(",") : value, // Supporta liste di stringhe
+      value: value.includes(",") ? value.split(",") : value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSave(structuredClone(rule)); // Passa una copia dell'oggetto rule
+    if (globalIndex !== null) {
+      onSave(structuredClone(rule), globalIndex);
+    } else {
+      console.error("globalIndex is null");
+    }
   };
 
   return (
