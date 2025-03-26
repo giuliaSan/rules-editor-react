@@ -35,4 +35,4 @@ Assicurati di avere [Node.js](https://nodejs.org/) e [npm](https://www.npmjs.com
 
 4. Per avviare il progetto in modalità di sviluppo, esegui il comando:
    ```bash
-   npm start
+   npm run dev
