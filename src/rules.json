@@ -1,0 +1,1382 @@
+[
+  {
+    "group_id": "067c809c-9111-7d68-8000-d6e8eb8c896c",
+    "name": "Rule 5",
+    "rules": [
+      {
+        "comparison_type": "employment_status_first",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "unemployed"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d68-8000-d6e8eb8c896c",
+    "name": "Rule 5",
+    "rules": [
+      {
+        "comparison_type": "mortgage_amount",
+        "comparison_operator": "below",
+        "comparison_value_type": "int",
+        "value": 30000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d68-8000-d6e8eb8c896c",
+    "name": "Rule 5",
+    "rules": [
+      {
+        "comparison_type": "property_type",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "subrogation"
+      },
+      {
+        "comparison_type": "mortgage_amount",
+        "comparison_operator": "below",
+        "comparison_value_type": "int",
+        "value": 300000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7dbc-8000-009ebcc03cb1",
+    "name": "Rule 6",
+    "rules": [
+      {
+        "comparison_type": "property_type",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "subrogation"
+      },
+      {
+        "comparison_type": "mortgage_amount",
+        "comparison_operator": "lte",
+        "comparison_value_type": "int",
+        "value": 350000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c8e-8000-5c5cf673a491",
+    "name": "Rule 7",
+    "rules": [
+      {
+        "comparison_type": "property_type",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "subrogation"
+      },
+      {
+        "comparison_type": "mortgage_amount",
+        "comparison_operator": "gt",
+        "comparison_value_type": "int",
+        "value": 350000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c8147-35ad-770e-8000-ba95a621bae1",
+    "name": "Rule 8",
+    "rules": [
+      {
+        "comparison_type": "utm_source",
+        "comparison_operator": "string_contain",
+        "comparison_value_type": "str",
+        "value": "immobiliare"
+      },
+      {
+        "comparison_type": "utm_medium",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "preapprovazione"
+      },
+      {
+        "comparison_type": "preapproval_result",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "online"
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "bid_made",
+          "signed_sale_agreement"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7cc1-8000-abf57516eb16",
+    "name": "Rule 9",
+    "rules": [
+      {
+        "comparison_type": "utm_source",
+        "comparison_operator": "string_contain",
+        "comparison_value_type": "str",
+        "value": "immobiliare"
+      },
+      {
+        "comparison_type": "utm_medium",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "preapprovazione"
+      },
+      {
+        "comparison_type": "preapproval_result",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "online"
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "started_searching",
+          "visited_some",
+          "to_make_bid"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 10",
+    "rules": [
+      {
+        "comparison_type": "utm_source",
+        "comparison_operator": "string_contain",
+        "comparison_value_type": "str",
+        "value": "immobiliare"
+      },
+      {
+        "comparison_type": "utm_medium",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "preapprovazione"
+      },
+      {
+        "comparison_type": "preapproval_result",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "filiale"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7dbc-8000-009ebcc03cb1",
+    "name": "Rule 11",
+    "rules": [
+      {
+        "comparison_type": "target_mad",
+        "comparison_operator": "equal",
+        "comparison_value_type": "bool",
+        "value": true
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "below",
+        "comparison_value_type": "int",
+        "value": 80000
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "visited_some",
+          "to_make_bid"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c8e-8000-5c5cf673a491",
+    "name": "Rule 12",
+    "rules": [
+      {
+        "comparison_type": "target_mad",
+        "comparison_operator": "equal",
+        "comparison_value_type": "bool",
+        "value": true
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "below",
+        "comparison_value_type": "int",
+        "value": 80000
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "bid_made",
+          "signed_sale_agreement"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c8147-35ad-770e-8000-ba95a621bae1",
+    "name": "Rule 13",
+    "rules": [
+      {
+        "comparison_type": "target_mad",
+        "comparison_operator": "equal",
+        "comparison_value_type": "bool",
+        "value": true
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "bid_made",
+          "signed_sale_agreement"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 80000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c8147-35ad-770e-8000-ba95a621bae1",
+    "name": "Rule 13",
+    "rules": [
+      {
+        "comparison_type": "target_mad",
+        "comparison_operator": "equal",
+        "comparison_value_type": "bool",
+        "value": true
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "to_make_bid"
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "above",
+        "comparison_value_type": "int",
+        "value": 500000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7cc1-8000-abf57516eb16",
+    "name": "Rule 14",
+    "rules": [
+      {
+        "comparison_type": "target_mad",
+        "comparison_operator": "equal",
+        "comparison_value_type": "bool",
+        "value": true
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "bid_made",
+          "signed_sale_agreement"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "below",
+        "comparison_value_type": "int",
+        "value": 80000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7cc1-8000-abf57516eb16",
+    "name": "Rule 14",
+    "rules": [
+      {
+        "comparison_type": "target_mad",
+        "comparison_operator": "equal",
+        "comparison_value_type": "bool",
+        "value": true
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "to_make_bid"
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 200000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 15",
+    "rules": [
+      {
+        "comparison_type": "target_mad",
+        "comparison_operator": "equal",
+        "comparison_value_type": "bool",
+        "value": true
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "to_make_bid"
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "below",
+        "comparison_value_type": "int",
+        "value": 200000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 15",
+    "rules": [
+      {
+        "comparison_type": "target_mad",
+        "comparison_operator": "equal",
+        "comparison_value_type": "bool",
+        "value": true
+      },
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "started_searching",
+          "visited_some"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 200000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d68-8000-d6e8eb8c896c",
+    "name": "Rule 16",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "started_searching",
+          "visited_some"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "below",
+        "comparison_value_type": "int",
+        "value": 70000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c8e-8000-5c5cf673a491",
+    "name": "Rule 17",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "signed_sale_agreement ",
+          "bid_made"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c8e-8000-5c5cf673a491",
+    "name": "Rule 17",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "to_make_bid"
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 500000
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7dbc-8000-009ebcc03cb1",
+    "name": "Rule 18",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "to_make_bid"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 19",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_6_months",
+          "3_months"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 300000
+      },
+      {
+        "comparison_type": "employment_status_1",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 19",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "list_str",
+        "value": [
+          "visited_some"
+        ]
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_6_months",
+          "3_months"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 300000
+      },
+      {
+        "comparison_type": "employment_status_2",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 19",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_6_months",
+          "3_months"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 300000
+      },
+      {
+        "comparison_type": "employment_sector_1",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "fixed_1"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 19",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_6_months",
+          "3_months"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 300000
+      },
+      {
+        "comparison_type": "employment_sector_2",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "fixed_1"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 19",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_6_months",
+          "3_months"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 300000
+      },
+      {
+        "comparison_type": "employment_sector_1",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "piva_3"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 19",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_6_months",
+          "3_months"
+        ]
+      },
+      {
+        "comparison_type": "mortage_amount",
+        "comparison_operator": "gte",
+        "comparison_value_type": "int",
+        "value": 300000
+      },
+      {
+        "comparison_type": "employment_sector_2",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "piva_3"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 20",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_sector_1",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "fixed_1"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 20",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_sector_2",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "fixed_1"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 20",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_sector_1",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "piva_2",
+          "piva_3"
+        ]
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 20",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_sector_2",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "piva_2",
+          "piva_3"
+        ]
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 20",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_status_1",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 20",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_status_2",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 21",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_sector_1",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "fixed_1"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 21",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_sector_2",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "fixed_1"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 21",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_sector_1",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "piva_2",
+          "piva_3"
+        ]
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 21",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_sector_2",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "piva_2",
+          "piva_3"
+        ]
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 21",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_status_1",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7c4b-8000-7041d6e8e6aa",
+    "name": "Rule 21",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "employment_status_2",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 22",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "started_searching"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "employment_sector_1",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "fixed_1",
+          "piva_2"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 22",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "started_searching"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "employment_status_1",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 22",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "started_searching"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "employment_sector_2",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "fixed_1",
+          "piva_2"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 22",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "started_searching"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "3_months",
+          "3_6_months",
+          "6_12_months"
+        ]
+      },
+      {
+        "comparison_type": "employment_status_2",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 22",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "over_12_months"
+      },
+      {
+        "comparison_type": "employment_sector_1",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "fixed_1",
+          "piva_2"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 22",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "over_12_months"
+      },
+      {
+        "comparison_type": "employment_status_1",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 22",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "over_12_months"
+      },
+      {
+        "comparison_type": "employment_sector_2",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "fixed_1",
+          "piva_2"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  },
+  {
+    "group_id": "067c809c-9111-7d47-8000-aa9fa5482966",
+    "name": "Rule 22",
+    "rules": [
+      {
+        "comparison_type": "search_status",
+        "comparison_operator": "equal",
+        "comparison_value_type": "str",
+        "value": "visited_some"
+      },
+      {
+        "comparison_type": "purchase_period",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "over_12_months"
+      },
+      {
+        "comparison_type": "employment_status_2",
+        "comparison_operator": "include",
+        "comparison_value_type": "list_str",
+        "value": [
+          "permanent",
+          "retired",
+          "apprenticeship"
+        ]
+      },
+      {
+        "comparison_type": "sustainability",
+        "comparison_operator": "not_equal",
+        "comparison_value_type": "str",
+        "value": "low"
+      }
+    ],
+    "operator": "AND"
+  }
+]

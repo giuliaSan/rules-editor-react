@@ -1,0 +1,7 @@
+// Override Bulma's default colors
+$primary: #1D72B8; // custom primary color
+$link: #4CAF50;    // custom link color
+$danger: #FF6347;  // custom danger color
+
+// Import Bulma
+@import 'bulma';
