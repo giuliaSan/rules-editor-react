@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import FileUploader from "./components/FileUploader";
 import RuleTable from "./components/RuleTable";
-import RuleForm from "./components/RuleForm";
+import RuleForm from "./components/RuleEdit";
+import RuleAdd from "./components/RuleAdd";
 import SaveButton from "./components/SaveButton";
 import { RuleGroup, Rule} from "./types/rule";
 import { saveJson } from "./utils/JsonHandler";
@@ -14,9 +15,32 @@ const App: React.FC = () => {
   const [editingRuleIndex, setEditingRuleIndex] = useState<number | null>(null);
   const [isModalVisible, setIsModalVisible] = useState<boolean>(false); 
   const [currentGlobalIndex, setCurrentGlobalIndex] = useState<number | null>(null);
+  const [isAddModalVisible, setIsAddModalVisible] = useState(false);
 
   const handleFileUpload = (data: RuleGroup[]) => {
     setRuleGroups(data);
+  };
+
+  const handleAddRule = (group_id: string, group_name: string, operator: string, newRule: Rule) => {
+    setRuleGroups((prevGroups) => {
+      const updatedGroups = [...prevGroups];
+      const existingGroupIndex = updatedGroups.findIndex((group) => group.group_id === group_id);
+
+      if (existingGroupIndex !== -1) {
+        updatedGroups[existingGroupIndex].rules.push(newRule);
+      } else {
+        updatedGroups.push({
+          group_id,
+          name: group_name,
+          operator,
+          rules: [newRule],
+        });
+      }
+  
+      return updatedGroups;
+    });
+  
+    setIsAddModalVisible(false);
   };
 
   const handleSave = (updatedRule: Rule, globalIndex: number) => {
@@ -83,7 +107,11 @@ const handleCancel = () => {
       {ruleGroups.length > 0 && (
         
         <div className="table-content-container">
+         
           <SaveButton onSave={handleSaveUpdatedJson} />
+          <button onClick={() => setIsAddModalVisible(true)} className="button is-primary is-green is-pulled-right mr-6 mb-3">
+            Add +
+          </button>
           <RuleTable
             ruleGroups={ruleGroups}
             onEditRule={handleEditRule}
@@ -100,6 +128,12 @@ const handleCancel = () => {
             onCancel={handleCancel} 
           />
         )}
+      </Modal>
+      <Modal isVisible={isAddModalVisible} onClose={() => setIsAddModalVisible(false)}>
+          <RuleAdd
+            onSave={handleAddRule}
+            onCancel={() => setIsAddModalVisible(false)}
+          />
       </Modal>
     </div>  
   );

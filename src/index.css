@@ -170,6 +170,11 @@ button:focus-visible {
   background-color: #747bff;
 }
 
+.is-green {
+  background-color: lightgreen;
+}
+
+
 .is-light {
   background-color: grey;
 }
