@@ -16,8 +16,7 @@ export const loadJson = (file: File): Promise<RuleGroup[]> => {
         const data = JSON.parse(reader.result as string);
         resolve(data);
       } catch (error) {
-        reject("Errore nel parsing del file JSON");
-      }
+        reject("Error in JSON parsing: " + error);      }
     };
     reader.readAsText(file);
   });
